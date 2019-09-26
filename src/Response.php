@@ -48,6 +48,11 @@ class Response implements Responsable
         return $this;
     }
 
+    public function props()
+    {
+        return $this->props;
+    }
+
     public function toResponse($request)
     {
         $only = array_filter(explode(',', $request->header('X-Inertia-Partial-Data')));
